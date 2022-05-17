@@ -1,5 +1,5 @@
 # 盡可能簡單教怎麼在Windows平台上建立用Visual Studio Code開發的PyTorch或Tensorflow
-首先你需要一張[支援Cuda運算的NVIDIA顯示卡](https://developer.nvidia.com/cuda-gpus) (較常見的消費級顯示卡屬於GeForce或TITAN)並裝好驅動程式，接著是以下這些軟體，你可以先從這裡的超連結去他們官網下載最新版本
+首先你需要一張[支援Cuda運算的NVIDIA顯示卡](https://developer.nvidia.com/cuda-gpus) (較常見的消費級顯示卡屬於GeForce或TITAN) 並裝好驅動程式，接著是以下這些軟體，你可以先從這裡的超連結去他們官網下載最新版本
 
 - [Anaconda](https://www.anaconda.com/products/distribution)  示範版本2022.05
 - [Cuda ToolKit](https://developer.nvidia.com/cuda-downloads) 示範版本11.7
