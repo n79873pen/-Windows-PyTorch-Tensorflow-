@@ -66,4 +66,6 @@ pip和conda其實都是在做套件管理的指令，只有一些結構上的細
 新增一個.py檔，寫這些指令並執行<br>
 ![image](./img/testgpu0.png)<br>
 輸出裡面有提到GPU就是成功了<br>
-![image](./img/testgpu1.png)
+![image](./img/testgpu1.png)<br>
+<br>
+子豪 - 2022/05
