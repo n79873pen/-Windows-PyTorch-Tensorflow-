@@ -1,8 +1,23 @@
 # 盡可能簡單教怎麼在Windows平台上建立用Visual Studio Code開發的PyTorch或Tensorflow
-會用到的東西，你可以先從這裡的超連結去他們官網下載最新版本
-- [Anaconda](https://www.anaconda.com/products/distribution)
-- [Visual Studio Code](https://code.visualstudio.com/) (下稱VSCode，因為大家都這樣叫) <br>
-本文撰於2022/05，因此示範也以這時間點的Python 3.9和VSCode 2022示範
+首先你需要一張支援Cuda運算的NVIDIA顯示卡並裝好驅動程式，接著是以下這些軟體，你可以先從這裡的超連結去他們官網下載最新版本
+
+- [Anaconda](https://www.anaconda.com/products/distribution)  示範版本2022.05
+- [Cuda ToolKit](https://developer.nvidia.com/cuda-downloads) 示範版本11.7
+- [cuDNN](https://developer.nvidia.com/rdp/cudnn-download) 示範版本8.4.0
+- [Visual Studio Code](https://code.visualstudio.com/) 示範版本2022 (下稱VSCode，因為大家都這樣叫)<br>
+
+## 安裝Cuda Toolkit
+我忘記截圖了，只要下一步到底就好，__務必要記得安裝路徑__<br>
+安裝過程中螢幕閃爍是自然現象不用怕<br>
+![image](./img/ctk.png)<br>
+## 安裝cuDNN
+在Cuda Toolkit資料夾裡進到這一層資料夾<br>
+![image](./img/cd0.png)<br>
+打開cuDNN的壓縮檔，把裡面的bin, include, lib拖進去剛剛叫你找的資料夾<br>
+![image](./img/cd1.png)<br>
+有些人後續執行的時候會遇到找不到zlibwapi.dll的問題，這點其實在NVIDIA自己的[cuDNN installation guide](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installwindows)有提到，我的解決方式也很簡單: <br>
+1. 下載[ZLIB DLL](http://www.winimage.com/zLibDll/zlib123dllx64.zip) <br>
+2. 打開壓縮檔裡的`dll_x64`資料夾，把`zlibwapi.dll`放到你電腦裡的`C:\Windows\System32`就好
 ## 安裝Anaconda
 1. 打開安裝檔 <del>不然載心酸?</del><br>
 ![image](./img/a0.png)<br>
@@ -47,4 +62,8 @@ VSCode基本上只是非常強大的文字編輯器，所以要開發還是要�
 只要看到我標記起來的這段關鍵字並且底下的輸入欄回來了就是安裝完了<br>
 ![image](./img/t5.png)<br>
 pip和conda其實都是在做套件管理的指令，只有一些結構上的細微差別，該用哪個很多人爭論，我都是用conda包著pip所以不要跟我吵該用哪個，但你如果知道這兩者的差別而且你自己有要用哪個的主見的話也不需要來看這篇教學對吧? <br>
-2022/05/17 05:38 我先睡覺 其他醒來再補
+## 至此，所有安裝作業都完成了，檢查一下吧
+新增一個.py檔，寫這些指令並執行<br>
+![image](./img/testgpu0.png)
+輸出裡面有提到GPU就是成功了<br>
+![image](./img/testgpu1.png)
